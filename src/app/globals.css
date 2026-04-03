@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-gold: #b58b42;
+  --color-ink: #0b0d10;
+  --color-ivory: #f4eee3;
+  --color-mist: #d1c6b5;
+  --color-silver: #b4b7bc;
+  --font-sans-stack: "Avenir Next", "Helvetica Neue", "Segoe UI", sans-serif;
+  --font-serif-stack: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Baskerville, serif;
+  --background: var(--color-ink);
+  --foreground: var(--color-ivory);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-gold: var(--color-gold);
+  --color-ink: var(--color-ink);
+  --color-ivory: var(--color-ivory);
+  --color-mist: var(--color-mist);
+  --color-silver: var(--color-silver);
+  --font-sans: var(--font-sans-stack);
+  --font-serif: var(--font-serif-stack);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@utility page-shell {
+  margin-inline: auto;
+  width: min(100%, 1360px);
+  padding-inline: clamp(1.25rem, 2.8vw, 2rem);
+}
+
+@utility section-shell {
+  padding-block: clamp(5rem, 8vw, 8rem);
+}
+
+* {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+html {
+  background: #090b0d;
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(180deg, #090b0d 0%, #0d1014 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans-stack);
+  line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.018), transparent 22%),
+    radial-gradient(circle at 16% 0%, rgba(181, 139, 66, 0.08), transparent 18%);
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+:where(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+:where(p, li) {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: rgba(181, 139, 66, 0.32);
+  color: var(--color-ivory);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }
