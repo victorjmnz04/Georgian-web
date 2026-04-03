@@ -34,7 +34,7 @@ export function ProductVisual({
       className={`group relative overflow-hidden border ${aspectMap[aspect]} ${
         isLight
           ? "rounded-[1.35rem] border-black/8 bg-[linear-gradient(180deg,#fbf8f1_0%,#f1ece3_100%)]"
-          : "rounded-[1.5rem] border-white/10 bg-[linear-gradient(180deg,rgba(18,20,24,0.98)_0%,rgba(12,14,17,0.98)_100%)]"
+          : "rounded-[1.05rem] border-white/8 bg-[linear-gradient(180deg,rgba(17,19,23,0.98)_0%,rgba(11,13,16,0.98)_100%)]"
       }`}
     >
       <div
@@ -44,11 +44,9 @@ export function ProductVisual({
             : "bg-[linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0)_20%,rgba(11,13,16,0.18)_100%)]"
         }`}
       />
-      <div
-        className={`absolute inset-4 ${
-          isLight ? "rounded-[1rem] border border-black/7" : "rounded-[1.2rem] border border-white/8"
-        }`}
-      />
+      {isLight ? (
+        <div className="absolute inset-4 rounded-[1rem] border border-black/7" />
+      ) : null}
 
       {showOverlayMeta ? (
         <>
@@ -81,7 +79,7 @@ export function ProductVisual({
         </>
       ) : null}
 
-      <div className="absolute inset-x-7 bottom-20 top-[4.5rem] overflow-hidden">
+      <div className="absolute inset-x-6 bottom-[4.3rem] top-[4.2rem] overflow-hidden">
         <div className="relative h-full w-full">
           <div className="absolute inset-0 transition-all duration-500 ease-out group-hover:scale-[0.985] group-hover:opacity-0">
             <ProductFigure className="h-full w-full" product={product} variantIndex={variantIndex} />
@@ -97,7 +95,7 @@ export function ProductVisual({
       </div>
 
       {showOverlayMeta ? (
-        <div className="absolute inset-x-6 bottom-6 z-10 flex items-end justify-between gap-4">
+        <div className="absolute inset-x-5 bottom-5 z-10 flex items-end justify-between gap-4">
           <div className="space-y-2">
             <p
               className={`text-[0.65rem] uppercase tracking-[0.3em] capitalize ${

@@ -14,8 +14,8 @@ export function ProductCard({ locale, priority = false, product }: ProductCardPr
   const dictionary = getDictionary(locale);
 
   return (
-    <article className="group rounded-[1.4rem] border border-white/8 bg-white/[0.02] p-4 sm:p-[1.125rem]">
-      <Link className="block space-y-6" href={buildLocalizedHref(`/product/${product.slug}`, locale)}>
+    <article className="group">
+      <Link className="block space-y-5" href={buildLocalizedHref(`/product/${product.slug}`, locale)}>
         <div className="transition-transform duration-500 ease-out group-hover:-translate-y-1.5">
           <ProductVisual aspect="portrait" locale={locale} priority={priority} product={product} />
         </div>

@@ -9,6 +9,13 @@ import { BrandWordmark } from "@/components/ui/brand-wordmark";
 import { buildLocalizedHref, getDictionary, getLocaleFromSearchParams } from "@/lib/i18n";
 import { navLinks } from "@/lib/site-data";
 
+const navKeyMap = {
+  Brand: "about",
+  Collection: "collection",
+  Community: "contact",
+  Home: "home",
+} as const;
+
 export function SiteHeader() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -47,9 +54,10 @@ export function SiteHeader() {
           <BrandWordmark compact withEst={!floating} />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-6 xl:gap-8 lg:flex">
           {navLinks.map((link) => {
             const active = pathname === link.href;
+            const navKey = navKeyMap[link.label as keyof typeof navKeyMap];
 
             return (
               <Link
@@ -60,7 +68,7 @@ export function SiteHeader() {
                 key={link.href}
                 onClick={closeMenu}
               >
-                {dictionary.header.nav[link.label.toLowerCase() as keyof typeof dictionary.header.nav]}
+                {dictionary.header.nav[navKey]}
               </Link>
             );
           })}
@@ -113,6 +121,7 @@ export function SiteHeader() {
             <div className="space-y-6">
               {navLinks.map((link) => {
                 const active = pathname === link.href;
+                const navKey = navKeyMap[link.label as keyof typeof navKeyMap];
 
                 return (
                   <Link
@@ -123,7 +132,7 @@ export function SiteHeader() {
                     key={link.href}
                     onClick={closeMenu}
                   >
-                    {dictionary.header.nav[link.label.toLowerCase() as keyof typeof dictionary.header.nav]}
+                    {dictionary.header.nav[navKey]}
                   </Link>
                 );
               })}

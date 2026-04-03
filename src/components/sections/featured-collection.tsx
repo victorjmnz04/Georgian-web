@@ -26,7 +26,7 @@ export function FeaturedCollection({ locale }: FeaturedCollectionProps) {
           </Reveal>
 
           <Reveal delay={0.08}>
-            <div className="rounded-[1.75rem] border border-white/10 bg-white/[0.03] p-6">
+            <div className="rounded-[1.05rem] border border-white/8 bg-white/[0.02] p-6">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-mist)]">
                 {dictionary.home.featuredNoteEyebrow}
               </p>

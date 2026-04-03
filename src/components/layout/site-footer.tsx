@@ -7,6 +7,13 @@ import { buildLocalizedHref, getDictionary, getLocaleFromSearchParams } from "@/
 import { navLinks, socialLinks } from "@/lib/site-data";
 import { useSearchParams } from "next/navigation";
 
+const navKeyMap = {
+  Brand: "about",
+  Collection: "collection",
+  Community: "contact",
+  Home: "home",
+} as const;
+
 export function SiteFooter() {
   const searchParams = useSearchParams();
   const locale = getLocaleFromSearchParams(Object.fromEntries(searchParams.entries()));
@@ -33,15 +40,19 @@ export function SiteFooter() {
                 {dictionary.footer.navigate}
               </p>
               <div className="mt-5 space-y-3">
-                {navLinks.map((link) => (
-                  <Link
-                    className="block text-sm text-[var(--color-silver)] transition-colors hover:text-white"
-                    href={buildLocalizedHref(link.href, locale)}
-                    key={link.href}
-                  >
-                    {dictionary.header.nav[link.label.toLowerCase() as keyof typeof dictionary.header.nav]}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  const navKey = navKeyMap[link.label as keyof typeof navKeyMap];
+
+                  return (
+                    <Link
+                      className="block text-sm text-[var(--color-silver)] transition-colors hover:text-white"
+                      href={buildLocalizedHref(link.href, locale)}
+                      key={link.href}
+                    >
+                      {dictionary.header.nav[navKey]}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
 
