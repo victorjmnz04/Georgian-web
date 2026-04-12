@@ -34,7 +34,7 @@ const dictionaries = {
       heroStats: [
         { label: "Origen", value: "Sevilla" },
         { label: "Posicionamiento", value: "Lujo accesible" },
-        { label: "Público", value: "18 a 50" },
+        { label: "Público", value: "Para todos" },
       ],
       heroTitle:
         "Una casa de moda contemporánea definida por la contención, el atractivo y la claridad.",
@@ -482,7 +482,7 @@ const dictionaries = {
       heroStats: [
         { label: "Origin", value: "Seville" },
         { label: "Positioning", value: "Accessible luxury" },
-        { label: "Audience", value: "18 to 50" },
+        { label: "Audience", value: "For everyone" },
       ],
       heroTitle:
         "A contemporary fashion house shaped by restraint, allure, and clarity.",
@@ -925,7 +925,7 @@ const dictionaries = {
       heroStats: [
         { label: "Herkunft", value: "Sevilla" },
         { label: "Positionierung", value: "Zugänglicher Luxus" },
-        { label: "Zielgruppe", value: "18 bis 50" },
+        { label: "Zielgruppe", value: "Für alle" },
       ],
       heroTitle:
         "Ein zeitgenössisches Modehaus, geprägt von Zurückhaltung, Anziehung und Klarheit.",
@@ -1372,7 +1372,7 @@ const dictionaries = {
       heroStats: [
         { label: "Origine", value: "Séville" },
         { label: "Positionnement", value: "Luxe accessible" },
-        { label: "Public", value: "18 à 50" },
+        { label: "Public", value: "Pour tous" },
       ],
       heroTitle:
         "Une maison de mode contemporaine façonnée par la retenue, l'allure et la clarté.",
@@ -1819,7 +1819,7 @@ const dictionaries = {
       heroStats: [
         { label: "Origine", value: "Siviglia" },
         { label: "Posizionamento", value: "Lusso accessibile" },
-        { label: "Pubblico", value: "18 a 50" },
+        { label: "Pubblico", value: "Per tutti" },
       ],
       heroTitle:
         "Una casa di moda contemporanea plasmata da misura, fascino e chiarezza.",
@@ -2266,7 +2266,7 @@ const dictionaries = {
       heroStats: [
         { label: "Origem", value: "Sevilha" },
         { label: "Posicionamento", value: "Luxo acessível" },
-        { label: "Público", value: "18 a 50" },
+        { label: "Público", value: "Para todos" },
       ],
       heroTitle:
         "Uma casa de moda contemporânea moldada por contenção, atração e clareza.",

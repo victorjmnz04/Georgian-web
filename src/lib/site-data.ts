@@ -77,8 +77,8 @@ export const navLinks: NavLink[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { href: "https://instagram.com", label: "Instagram" },
-  { href: "https://pinterest.com", label: "Pinterest" },
+  { href: "https://instagram.com/georgianatelier", label: "Instagram" },
+  { href: "https://pinterest.com/georgianatelier", label: "Pinterest" },
   { href: "mailto:hello@georgianatelier.com", label: "Email" },
 ];
 

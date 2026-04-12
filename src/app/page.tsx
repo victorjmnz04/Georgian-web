@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { BrandManifesto } from "@/components/sections/brand-manifesto";
 import { CommunityInvite } from "@/components/sections/community-invite";
 import { FeaturedCollection } from "@/components/sections/featured-collection";
 import { HomeCategoryShowcase } from "@/components/sections/home-category-showcase";
 import { HomeHero } from "@/components/sections/home-hero";
-import { MaterialVision } from "@/components/sections/material-vision";
 import { getDictionary, getLocaleFromSearchParams } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -48,9 +46,7 @@ export default async function HomePage({
     <>
       <HomeHero locale={locale} />
       <FeaturedCollection locale={locale} />
-      <BrandManifesto locale={locale} />
       <HomeCategoryShowcase locale={locale} />
-      <MaterialVision locale={locale} />
       <CommunityInvite locale={locale} />
     </>
   );

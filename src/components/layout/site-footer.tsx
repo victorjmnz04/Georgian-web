@@ -25,10 +25,7 @@ export function SiteFooter() {
       <div className="page-shell relative py-14 md:py-20">
         <div className="grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
           <div className="space-y-6">
-            <BrandWordmark withEst />
-            <p className="max-w-lg text-base leading-7 text-[var(--color-silver)]">
-              {dictionary.footer.description}
-            </p>
+            <BrandWordmark />
             <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-mist)]">
               {dictionary.footer.location}
             </p>
@@ -67,7 +64,7 @@ export function SiteFooter() {
                     href={link.href}
                     key={link.label}
                     rel="noreferrer"
-                    target="_blank"
+                    target={link.href.startsWith("mailto:") ? undefined : "_blank"}
                   >
                     {link.label}
                   </a>

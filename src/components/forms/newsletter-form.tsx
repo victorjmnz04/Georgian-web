@@ -13,14 +13,35 @@ export function NewsletterForm({ compact = false, locale }: NewsletterFormProps)
   const [email, setEmail] = useState("");
   const [isPending, startTransition] = useTransition();
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const dictionary = getDictionary(locale);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setError(null);
 
-    startTransition(() => {
-      setSubmitted(true);
-      setEmail("");
+    startTransition(async () => {
+      try {
+        const response = await fetch("/api/newsletter/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, locale }),
+        });
+
+        if (!response.ok) {
+          const data = await response.json();
+          setError(data.error || "Error al suscribirse");
+          setSubmitted(false);
+          return;
+        }
+
+        setSubmitted(true);
+        setEmail("");
+        setError(null);
+      } catch {
+        setError("Error de conexión. Por favor intenta de nuevo.");
+        setSubmitted(false);
+      }
     });
   };
 
@@ -38,6 +59,9 @@ export function NewsletterForm({ compact = false, locale }: NewsletterFormProps)
             if (submitted) {
               setSubmitted(false);
             }
+            if (error) {
+              setError(null);
+            }
           }}
           placeholder={dictionary.forms.newsletter.placeholder}
           required
@@ -53,9 +77,11 @@ export function NewsletterForm({ compact = false, locale }: NewsletterFormProps)
         </button>
       </div>
       <p className="text-sm leading-6 text-[var(--color-silver)]">
-        {submitted
-          ? dictionary.forms.newsletter.success
-          : dictionary.forms.newsletter.idle}
+        {error
+          ? error
+          : submitted
+            ? dictionary.forms.newsletter.success
+            : dictionary.forms.newsletter.idle}
       </p>
     </form>
   );

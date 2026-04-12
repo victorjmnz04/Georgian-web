@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { ContactForm } from "@/components/forms/contact-form";
 import { NewsletterForm } from "@/components/forms/newsletter-form";
 import { Reveal } from "@/components/motion/reveal";
-import { PageHero } from "@/components/ui/page-hero";
 import { getDictionary, getLocaleFromSearchParams } from "@/lib/i18n";
 import { buildMetadata } from "@/lib/metadata";
 
@@ -35,78 +34,39 @@ export default async function ContactPage({
 
   return (
     <>
-      <PageHero
-        description={dictionary.contact.heroDescription}
-        eyebrow={dictionary.contact.heroEyebrow}
-        stats={dictionary.contact.heroStats}
-        title={dictionary.contact.heroTitle}
-      />
+      {/* Newsletter Section */}
+      <section className="border-b border-white/8 pb-16 pt-28 md:pb-20 md:pt-36">
+        <div className="page-shell">
+          <Reveal className="mx-auto max-w-2xl text-center">
+            <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-mist)]">
+              Newsletter
+            </p>
+            <h1 className="mt-6 font-serif text-4xl leading-[0.96] text-[var(--color-ivory)] md:text-5xl">
+              {dictionary.contact.newsletterTitle}
+            </h1>
+            <div className="mt-8">
+              <NewsletterForm key={`contact-newsletter-${locale}`} locale={locale} />
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
+      {/* Contact Form Section */}
       <section className="section-shell">
-        <div className="page-shell grid gap-8 lg:grid-cols-[minmax(0,0.62fr)_minmax(0,0.38fr)]">
-          <Reveal>
-            <div className="rounded-[2.25rem] border border-white/10 bg-white/[0.03] p-6 md:p-8">
+        <div className="page-shell">
+          <Reveal className="mx-auto max-w-2xl">
+            <div className="rounded-[2.25rem] border border-white/10 bg-white/[0.03] p-6 md:p-10">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-mist)]">
                 {dictionary.contact.formEyebrow}
               </p>
-              <h2 className="mt-4 font-serif text-4xl text-[var(--color-ivory)]">
+              <h2 className="mt-4 font-serif text-3xl text-[var(--color-ivory)] md:text-4xl">
                 {dictionary.contact.formTitle}
               </h2>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--color-silver)]">
-                {dictionary.contact.formDescription}
-              </p>
               <div className="mt-8">
                 <ContactForm key={`contact-form-${locale}`} locale={locale} />
               </div>
             </div>
           </Reveal>
-
-          <div className="grid gap-5">
-            {dictionary.contactMoments.map((item, index) => (
-              <Reveal delay={index * 0.05} key={item.title}>
-                <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6">
-                  <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-mist)]">
-                    {item.eyebrow}
-                  </p>
-                  <p className="mt-4 font-serif text-2xl text-[var(--color-ivory)]">
-                    {item.title}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section-shell border-y border-white/8 bg-[rgba(244,238,227,0.02)]">
-        <div className="page-shell grid gap-10 lg:grid-cols-[minmax(0,0.52fr)_minmax(0,0.48fr)]">
-          <Reveal className="space-y-6">
-            <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-mist)]">
-              {dictionary.contact.newsletterEyebrow}
-            </p>
-            <h2 className="font-serif text-4xl leading-[0.94] text-[var(--color-ivory)] md:text-5xl">
-              {dictionary.contact.newsletterTitle}
-            </h2>
-            <p className="max-w-2xl text-base leading-7 text-[var(--color-silver)]">
-              {dictionary.contact.newsletterDescription}
-            </p>
-            <NewsletterForm key={`contact-newsletter-${locale}`} locale={locale} />
-          </Reveal>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            {dictionary.socialMoodboard.map((item, index) => (
-              <Reveal delay={index * 0.04} key={item.title}>
-                <div className="rounded-[1.75rem] border border-white/10 bg-[rgba(8,10,12,0.56)] p-5">
-                  <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-mist)]">
-                    {item.title}
-                  </p>
-                  <p className="mt-3 text-sm leading-6 text-[var(--color-silver)]">
-                    {item.detail}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
         </div>
       </section>
     </>
