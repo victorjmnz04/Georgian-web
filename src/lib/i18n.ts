@@ -24,12 +24,12 @@ const dictionaries = {
       futureCardTitle:
         "Una identidad de moda sólida con espacio para convertirse en una plataforma comercial seria.",
       futureDescription:
-        "La ambición es clara: una firma emergente premium con el pulido de una casa madura, la usabilidad del retail moderno y un universo de marca que continúe más allá del grid de producto mediante editorial, comunidad y códigos visuales fuertes.",
+        "GEORGIAN nace con la ambición de unir la agilidad del comercio contemporáneo con el rigor estético de la alta moda. Un punto de vista claro: crear un ecosistema donde el diseño inteligente sea el estándar",
       futureEyebrow: "Mirando hacia delante",
       futureTitle:
-        "Construida para crecer como una marca de comercio real con un punto de vista claro.",
+        "Una firma emergente con el pulido de una casa madura.",
       heroDescription:
-        "GEORGIAN nace de la idea de que la elegancia debe sentirse instintiva. La marca habita entre la modernidad limpia, la refinación táctil y la seguridad de prendas que hacen vestirse más fácil, no más complicado.",
+        "GEORGIAN existe en la intersección del arte y la permanencia. No diseñamos para el momento, sino para el rastro que dejas al pasar. Cada pieza es un ejercicio de arquitectura textil: minimalismo radical que otorga autoridad a quien lo viste. Aquí, la elegancia no se explica; se impone a través de la calidad absoluta y el vacío de lo innecesario.",
       heroEyebrow: "Sobre GEORGIAN",
       heroStats: [
         { label: "Origen", value: "Sevilla" },
@@ -37,7 +37,7 @@ const dictionaries = {
         { label: "Público", value: "Para todos" },
       ],
       heroTitle:
-        "Una casa de moda contemporánea definida por la contención, el atractivo y la claridad.",
+        "La forma definitiva del silencio. Estética pura que trasciende el tiempo.",
       principlesDescription:
         "Estos principios mantienen la marca alineada mientras escala desde una primera cápsula fuerte hacia un ecosistema completo de moda y comercio.",
       principlesEyebrow: "Principios de marca",
@@ -46,7 +46,7 @@ const dictionaries = {
     aboutChapters: [
       {
         eyebrow: "Origen",
-        text: "GEORGIAN toma de Sevilla la luz del sur, el ritmo arquitectónico y la seguridad de vestirse con intención. El resultado es un lenguaje de armario limpio, sensual y bien asentado.",
+        text: "Nuestra estética se define por la claridad. Inspirados por el rigor arquitectónico de Sevilla, creamos piezas que trascienden las tendencias temporales. No diseñamos ropa, construimos un legado visual basado en la pureza de las líneas y la excelencia de los materiales",
         title: "Nacida en Sevilla, pensada para un mundo más amplio.",
       },
       {
@@ -56,8 +56,8 @@ const dictionaries = {
       },
       {
         eyebrow: "Comunidad",
-        text: "Hombres y mujeres entre dieciocho y cincuenta años llegan a GEORGIAN buscando diseño elevado pero llevable, con suficiente carácter para dejar huella y suficiente contención para durar.",
-        title: "Para quienes quieren verse compuestos rápidamente.",
+        text: "GEORGIAN es el punto de encuentro para quienes entienden que vestir bien es una forma de respeto propio. Nuestra comunidad no busca tendencias efímeras, sino una identidad sólida que equilibra el carácter necesario para destacar con la discreción necesaria para perdurar.",
+        title: "La elegancia de la intención.",
       },
     ],
     collection: {
@@ -230,23 +230,23 @@ const dictionaries = {
     homePillars: [
       {
         label: "Estilo",
-        text: "Composiciones amplias, contrastes silenciosos y un instinto claro por la proporción.",
-        title: "Claridad editorial",
+        text: "Diseñamos bajo un instinto de equilibrio. Siluetas limpias, contrastes en calma y una dirección creativa que prioriza el espacio y la forma sobre el ruido.",
+        title: "Estética de la proporción",
       },
       {
         label: "Materiales",
-        text: "Mezclas de lana, camisería fluida y knitwear denso con una mano realmente premium.",
-        title: "Confianza táctil",
+        text: "La calidad se siente antes de verse. Seleccionamos lanas de alta densidad, sedas fluidas y algodones de tacto técnico para asegurar que cada prenda sea una experiencia sensorial de confort y durabilidad.",
+        title: "Nobleza en la materia",
       },
       {
         label: "Diseño",
-        text: "Piezas elevadas desde la primera puesta, sin caer en el disfraz.",
-        title: "Lujo accesible",
+        text: "Piezas elevadas que no requieren explicación. Nuestra sastrería está pensada para integrarse en la vida real, ofreciendo un estándar de lujo que se disfruta en el uso diario, sin caer en el disfraz.",
+        title: "Distinción sin artificios",
       },
       {
         label: "Visión",
-        text: "Drops estacionales concebidos como capas de un armario más amplio y duradero.",
-        title: "Un armario que permanece",
+        text: "DNo creemos en la caducidad. Concebimos cada cápsula como una capa adicional para un armario en constante evolución, donde la versatilidad y la arquitectura de la prenda vencen al paso de las temporadas.",
+        title: "Vocación de permanencia",
       },
     ],
     legal: {
