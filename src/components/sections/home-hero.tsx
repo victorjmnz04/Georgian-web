@@ -36,7 +36,7 @@ export function HomeHero({ locale }: HomeHeroProps) {
                 <div className="relative aspect-[4/5]">
                   <Image
                     alt="GEORGIAN Chapter 01"
-                    className="object-contain p-6"
+                    className="object-cover object-top"
                     fill
                     priority
                     sizes="(min-width: 1280px) 54vw, (min-width: 768px) 90vw, 100vw"
