@@ -46,7 +46,7 @@ export default async function AboutPage({
         <div className="page-shell grid gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,0.9fr)] lg:items-start">
           <Reveal>
             <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10">
-              <div className="relative aspect-square">
+              <div className="relative aspect-[4/5]">
                 <Image
                   alt="GEORGIAN monogram"
                   className="object-cover object-center"
