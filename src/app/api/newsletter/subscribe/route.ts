@@ -184,11 +184,14 @@ export async function POST(request: NextRequest) {
       },
       { status: 200 }
     );
-  } catch (error) {
-    console.error("Newsletter subscription error:", error);
-    return NextResponse.json(
-      { error: "Error al suscribirse" },
-      { status: 500 }
-    );
-  }
+  } catch (error: any) {
+  console.error("🔥 FULL ERROR:", error);
+  console.error("🔥 MESSAGE:", error?.message);
+  console.error("🔥 STACK:", error?.stack);
+
+  return NextResponse.json(
+    { error: error?.message || "Error al suscribirse" },
+    { status: 500 }
+  );
+}
 }
