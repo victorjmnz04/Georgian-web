@@ -41,13 +41,22 @@ export async function POST(request: NextRequest) {
     }
 
     // Insert new subscriber
-    await supabase
+    const { data, error } = await supabase
       .from("newsletter_subscribers")
       .insert({
         email,
         locale,
         is_active: true,
-      });
+      })
+      .select();
+
+    if (error) {
+      console.error("❌ Supabase error:", error);
+      throw error;
+    }
+
+    console.log("✅ Insert OK:", data);
+
 
     // Send welcome email
     const subject = locale === "es" 
