@@ -79,7 +79,7 @@ export const navLinks: NavLink[] = [
 export const socialLinks: SocialLink[] = [
   { href: "https://www.instagram.com/georgian_designsgallery/", label: "Instagram" },
   { href: "https://pinterest.com/georgian_designsgallery", label: "Pinterest" },
-  { href: "mailto:georgianbrand@gmail.com", label: "Email" },
+  { href: "mailto:georgianbrandd@gmail.com", label: "Email" },
 ];
 
 export const sortOptions: { label: string; value: SortOption }[] = [
