@@ -33,8 +33,6 @@ const dictionaries = {
       heroEyebrow: "Sobre GEORGIAN",
       heroStats: [
         { label: "Origen", value: "Sevilla" },
-        { label: "Posicionamiento", value: "Lujo accesible" },
-        { label: "Público", value: "Para todos" },
       ],
       heroTitle:
         "La forma definitiva del silencio. Estética pura que trasciende el tiempo.",
