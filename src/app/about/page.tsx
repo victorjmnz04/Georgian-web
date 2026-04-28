@@ -49,7 +49,7 @@ export default async function AboutPage({
               <div className="relative aspect-[4/5]">
                 <Image
                   alt="GEORGIAN monogram"
-                  className="object-cover object-center"
+                  className="object-contain"
                   fill
                   priority
                   sizes="(min-width: 1280px) 42vw, (min-width: 768px) 90vw, 100vw"
