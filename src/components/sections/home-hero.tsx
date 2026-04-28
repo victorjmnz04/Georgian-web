@@ -33,7 +33,7 @@ export function HomeHero({ locale }: HomeHeroProps) {
           <Reveal delay={0.12} className="xl:pl-6">
             <ParallaxMedia offset={18}>
               <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-[rgba(18,20,24,0.88)] shadow-[0_30px_80px_rgba(0,0,0,0.24)]">
-                <div className="relative aspect-[4/5]">
+                <div className="relative aspect-[1358/1920]">
                   <Image
                     alt="GEORGIAN Chapter 01"
                     className="object-cover object-top"
